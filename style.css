@@ -1,0 +1,247 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times;
+    margin: 0 ;
+}
+
+/*CABEÇALHO*/
+.header {
+    display: flex;
+    justify-content: center ;
+    flex-direction: column;
+    background-image: url("/img/banner2.jpg");
+    background-size: cover;
+    height: 610px;
+}
+.header h1 {
+    color: #BFA3B5;
+    text-align: center  ;
+    /* margin-top: -2em ; */
+    font-family: monospace;
+    font-size: 7em ;
+}
+.space {
+    height: 80px ;
+}
+@media (max-width:600px){
+    .header h1 {
+        font-size: 4em ;
+    }
+    .space {
+        width: 0px ;
+    }
+}
+/*NAVEGATION*/
+.nav {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    transition: 0.4s;
+}
+.nav a {
+    text-decoration: none ;
+    padding: 10px ;
+    color: #0A0D02;
+}
+.navFixed {
+    top: 0 ;
+    background-color: rgba(31, 38, 7, 0.8);
+    padding: 0 ;
+    width: 100% ;
+    position: fixed ;
+}
+.nav .btnSearch {
+    height: 40px ;
+    width: 100px ;
+    text-align: center;
+    margin: 14px ;
+    border-radius: 10px;
+    border: none ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    outline: none;
+}
+.nav .btnSearch:hover {
+     cursor: pointer;
+}
+.nav .group {
+    display: flex;
+    flex-direction: row;
+    padding: 0px ;
+}
+.nav .group .icon {
+    margin-left: -38px ;
+    padding: 0px ;
+    border: none ;
+    outline:none;
+    background-color: transparent ;
+    opacity: 0.5;
+}
+.nav .search {
+    height: 40px ;
+    width: 200px ;
+    margin: 3px ;
+    border-radius: 10px;
+    border: none ;
+    outline: none ;
+}
+.nav .btnSearch .icon {
+    /* margin: 5px ; */
+    width: 15px ;
+    opacity: 0.5;
+}
+.intro {
+    width: 40% ;
+    margin: 0 auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.intro p {
+    width: 400px ;
+    color: #D5B8C7;
+}
+@media (max-width:600px){
+    .nav {
+        flex-wrap: wrap;
+    }
+    .nav .search {
+        height: 60px ;
+        width: 90% ;
+        border-radius: 10px;
+        border: none ;
+        outline: none ;
+    }
+    .nav .btnSearch {
+        height: 60px ;
+        width: 100px ;
+    }
+    .intro {
+        width: 90%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .intro p {
+        width: 100% ;
+        text-align: center;
+    }
+}
+
+/*Best*/
+.best {
+    margin: 2em  ;
+    text-align: center;
+    
+}
+.best .bestBooks {
+    height: 400px ;
+    background-color: #0D0D0D;
+}
+
+/* GRID LAYOUT */
+
+.section .book {
+    
+    font-family: Arial;
+    background-color: white ;
+    color: #0D0D0D ;
+    max-height: 400px;
+    width: 70%;
+    overflow: hidden;
+    padding: 10px ;
+    margin: 0 auto 10px ;
+    /* border-radius: 5px ; */
+    box-shadow: 0.7px 0.7px 5px #0D0D0D;
+}
+
+.book {
+    transition: 0.9s;
+    display: grid;
+    grid-template-areas:
+		"img titulo"
+        "img autor"
+        "img data"
+	;
+}
+.book h2 {
+    grid-area: titulo;
+}
+.book h5 {
+    grid-area: autor ;
+}
+.book p {
+    grid-area: data;
+    max-height: 198px ;
+    overflow: hidden;
+}
+.book img {
+    width: 200px;
+    margin-right: 10px ;
+    grid-area: img;
+}
+.btnLoad {
+    height: 40px ;
+    width: 100px ;
+    text-align: center;
+    margin: 15px auto 14px ;
+    border-radius: 10px;
+    border: none ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    outline: none;
+}
+.spinner {
+    margin: 0 auto ;
+    width: 40px;
+    height: 40px;
+    border: 6px solid #0A0D02 ;
+    border-left: 6px solid #BFA3B5;
+    border-radius: 50% ;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@media (max-width:700px) {
+    .section {
+        display: flex;
+        flex-wrap: wrap ;
+        justify-content: space-around;
+    }
+    .section .book {
+        width: 160px ;
+        margin: 2px ;
+        overflow: visible;
+    }
+    .book h2 {
+        font-size: medium;
+    }
+    .book {
+        transition: 0.9s;
+        display: grid;
+        grid-template-areas:
+            "img"
+            "titulo"
+            "autor"
+        ;
+    }
+    .book img {
+        width: 160px ;
+    }
+}
+
+
+
+/*FOOTER*/
+.footer {
+    padding: 50px;
+    background-color: #0A0D02;
+    color: #D5B8C7;
+    text-align: center;
+}
+.footer .info a img{
+    width: 50px ;
+}
