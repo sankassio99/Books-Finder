@@ -11,11 +11,16 @@ function criaAjax(url,dados,funcao)
 let spin ;
 function buscarPorTitulo()
 {
+    document.querySelector('.section').innerHTML="";
+    
     spin = document.querySelector("#spinner");
     spin.setAttribute("class","spinner");
-    console.log("aqui")
     let bookName = document.querySelector('#search').value ;
-    criaAjax("https://www.googleapis.com/books/v1/volumes?q=",bookName,mostrar);
+    let select = document.querySelector('.select') ;
+    let category = select.options[select.selectedIndex].value ;
+    document.querySelector('.feed').innerHTML = "Resultados da pesquisa para "+bookName+" Categoria: "+category ;
+    let dados = bookName+"+subject="+category ;
+    criaAjax("https://www.googleapis.com/books/v1/volumes?q=",dados,mostrar);
 }
 function mostrar()
 {
@@ -32,6 +37,7 @@ function mostrar()
             }
         }
         document.querySelector('.section').innerHTML="";
+        
         let data = JSON.parse(this.responseText); 
         //He gets a JSON object, then you should use the ResponseText.
         let title = '' ;

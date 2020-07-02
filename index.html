@@ -13,10 +13,21 @@
         <h1>BooksFinder</h1>
         <div class="nav">
             <input type="text" class="search" id="search" placeholder="Title" />
-            <div class="group">
-                <input type="text" class="search category" placeholder="Category" />
-                <button class="icon"><img src="/img/seta.png"></button>
-            </div>
+            <!-- <ul class="group">
+                    <a class="icon">Category<img src="/img/seta.png"></a> -->
+                    <ul class="group">
+                        <p>Category:</p>
+                        <select class="select">
+                            <option value="">Default</option>
+                            <option value="historia">Historia</option>
+                            <option value="literaturajuvenil">Juvenil</option>
+                            <option value="autoajuda">Auto-Ajuda</option>
+                            <option value="humor">Humor</option>
+                            <option value="psicologia">Psicologia</option>
+                            <option value="romance">Romance</option>
+                        </select>
+                    </ul>
+            <!-- </ul> --> 
            <button type="button" class="btnSearch" id="button"><img class="icon" src="/img/search.png"/> <a href="#section">Search</a></button>
         </div>
         <div class="space"></div>
@@ -28,11 +39,13 @@
         </div>
     </div>   
     <div class="best">
+        <div class="feed" id="feed"></div>
         <!-- <h2>Os Livros Mais Buscados</h2> -->
         <!-- <div class="bestBooks">
 
         </div> -->
     </div>
+    
     <div id="spinner">
 
     </div>

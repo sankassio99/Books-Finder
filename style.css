@@ -8,7 +8,8 @@ body{
     display: flex;
     justify-content: center ;
     flex-direction: column;
-    background-image: url("/img/banner2.jpg");
+    background-image: url("/img/banner3.jpg");
+    /* background-color: #0A0D02; */
     background-size: cover;
     height: 610px;
 }
@@ -44,7 +45,7 @@ body{
 }
 .navFixed {
     top: 0 ;
-    background-color: rgba(31, 38, 7, 0.8);
+    background-color: rgba(31, 38, 7, 1);
     padding: 0 ;
     width: 100% ;
     position: fixed ;
@@ -68,15 +69,28 @@ body{
     display: flex;
     flex-direction: row;
     padding: 0px ;
+    margin: 10px ;
+    background-color: white;
+    border-radius: 10px ;
 }
-.nav .group .icon {
-    margin-left: -38px ;
-    padding: 0px ;
+.nav .group p {
+    font-size: small;
+    font-family: Arial;
+    padding-left: 5px;
+}
+.nav .group .select {
     border: none ;
-    outline:none;
-    background-color: transparent ;
-    opacity: 0.5;
+    padding: 0px ;
+    margin: 0px ;
+    border-top-right-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+    outline: none ;
 }
+.nav .group .select option {
+    /* background-color: red ; */
+    font-size: large;
+}
+
 .nav .search {
     height: 40px ;
     width: 200px ;
@@ -102,18 +116,24 @@ body{
     color: #D5B8C7;
 }
 @media (max-width:600px){
-    .nav {
-        flex-wrap: wrap;
-    }
     .nav .search {
-        height: 60px ;
-        width: 90% ;
+        text-align: center;
+        width: 95% ;
         border-radius: 10px;
         border: none ;
         outline: none ;
     }
+    .group p{
+        /* height: 60px ; */
+        display: none;
+    }
+    .group .select {
+        /* width: 30px ; */
+        height: 40px ;
+        border-radius: 10px ;
+    }
     .nav .btnSearch {
-        height: 60px ;
+        /* height: 60px ; */
         width: 100px ;
     }
     .intro {
