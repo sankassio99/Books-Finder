@@ -8,7 +8,7 @@ body{
     display: flex;
     justify-content: center ;
     flex-direction: column;
-    background-image: url("/img/banner3.jpg");
+    background-image: url("img/banner3.jpg");
     /* background-color: #0A0D02; */
     background-size: cover;
     height: 610px;

@@ -42,13 +42,13 @@ function mostrar()
         //He gets a JSON object, then you should use the ResponseText.
         let title = '' ;
         spin.removeAttribute("class");
+
         for(let i=0; i < 5; i++){
             
             dataBook.title = data.items[i].volumeInfo.title ;
             dataBook.authors = data.items[i].volumeInfo.authors ;
             dataBook.description.push(data.items[i].volumeInfo.description) ;
             dataBook.imageLinks.smallThumbnail = data.items[i].volumeInfo.imageLinks.smallThumbnail ;
-            // showTitle.innerHTML += dataBook.title ;
 
             createElements(dataBook);
         }
